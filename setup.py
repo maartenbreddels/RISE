@@ -8,7 +8,8 @@ def install(use_symlink=False, enable=True, user=False):
     # Install the livereveal code.
     install_nbextension(livereveal_dir, symlink=use_symlink,
                         overwrite=use_symlink, user=user,
-			prefix=sys.prefix if not user else None)
+                        prefix=sys.prefix if not user else None)
+                        overwrite=use_symlink, user=user)
 
     if enable:
         cm = ConfigManager()
